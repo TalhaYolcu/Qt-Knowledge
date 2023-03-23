@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="i18n">
+<file alias="SimpleLoginApp_en_US.qm">/home/bursiyer/QtProjects/build-SimpleLoginApp-Desktop_Qt_5_12_12_GCC_64bit-Profile/.qm/SimpleLoginApp_en_US.qm</file>
+</qresource>
+</RCC>
