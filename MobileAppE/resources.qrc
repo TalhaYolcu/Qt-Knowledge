@@ -5,5 +5,7 @@
         <file>Icons/contact.png</file>
         <file>Icons/home.png</file>
         <file>Icons/telephone.png</file>
+        <file>Icons/tubitak.ico</file>
+        <file>Icons/tubitak.png</file>
     </qresource>
 </RCC>

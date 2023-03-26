@@ -121,7 +121,13 @@
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="BleDevices"/>
+           <widget class="QListWidget" name="BleDevices">
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+           </widget>
           </item>
           <item>
            <widget class="QPushButton" name="scanButton">
@@ -149,7 +155,13 @@
         <item row="0" column="0">
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
-           <widget class="QListWidget" name="contacts"/>
+           <widget class="QListWidget" name="contacts">
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+           </widget>
           </item>
          </layout>
         </item>
@@ -167,7 +179,13 @@
         <item row="0" column="0">
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <widget class="QListWidget" name="callHistory"/>
+           <widget class="QListWidget" name="callHistory">
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+           </widget>
           </item>
          </layout>
         </item>
@@ -183,7 +201,7 @@
      <x>0</x>
      <y>0</y>
      <width>333</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
