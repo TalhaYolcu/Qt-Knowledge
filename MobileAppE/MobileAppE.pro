@@ -27,3 +27,7 @@ RESOURCES += \
     resources.qrc
 
 win32: RC_ICONS += Icons\tubitak.ico
+
+macx : ICON = Icons\tubitak.ico
+
+unix : ICON = Icons\tubitak.ico

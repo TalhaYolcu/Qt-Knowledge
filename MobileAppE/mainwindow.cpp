@@ -7,10 +7,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix(":/Icons/bluetooth_blue.png");
-    ui->btIconLabel->setPixmap(pix.scaled(50,50,Qt::KeepAspectRatio));
 
-    //ui->btIconLabel->setFixedHeight(ui->urlLabel->height());
+
+
+    QPixmap pix(":/Icons/bluetooth_blue.png");
+    ui->btIconLabel->setPixmap(pix.scaled(30,30,Qt::KeepAspectRatio));
+    ui->tabWidget->tabBar()->setDocumentMode(true);
+    ui->tabWidget->tabBar()->setExpanding(true);
+    QPixmap pix2(":Icons/full-battery.png");
+    ui->batteryIconLabel->setPixmap(pix2.scaled(30,30,Qt::KeepAspectRatio));
 
 }
 
@@ -18,4 +23,3 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-

@@ -14,6 +14,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    int index=0;
+
+private slots:
+    void on_scanButton_clicked();
 
 private:
     Ui::MainWindow *ui;

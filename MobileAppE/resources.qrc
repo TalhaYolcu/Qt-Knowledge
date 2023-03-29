@@ -7,5 +7,9 @@
         <file>Icons/telephone.png</file>
         <file>Icons/tubitak.ico</file>
         <file>Icons/tubitak.png</file>
+        <file>Icons/battery.png</file>
+        <file>Icons/full-battery.png</file>
+        <file>Icons/half-battery.png</file>
+        <file>Icons/low-battery.png</file>
     </qresource>
 </RCC>

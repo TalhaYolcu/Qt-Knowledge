@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>333</width>
-    <height>720</height>
+    <height>620</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>333</width>
-    <height>720</height>
+    <height>620</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -31,24 +31,40 @@
   <property name="windowTitle">
    <string>ELÇİ</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/Icons/tubitak.png</normaloff>:/Icons/tubitak.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">font: 10pt &quot;Helvetica&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
     <item row="0" column="0">
-     <widget class="QTabWidget" name="contactsListWidget">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">QTabWidget::tab-bar {alignment: center}</string>
+       <string notr="true">font:13pt;</string>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::South</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
       </property>
       <widget class="QWidget" name="homePageTab">
        <property name="contextMenuPolicy">
@@ -56,6 +72,9 @@
        </property>
        <property name="layoutDirection">
         <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
        </property>
        <attribute name="icon">
         <iconset resource="resources.qrc">
@@ -74,11 +93,17 @@
             </property>
             <item>
              <widget class="QLabel" name="urlLabel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="styleSheet">
-               <string notr="true">background: red ; font : bold ;</string>
+               <string notr="true">background: red ; font : 15pt bold;</string>
               </property>
               <property name="text">
-               <string>tel@ip:port</string>
+               <string>5533806379</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -101,17 +126,49 @@
            </layout>
           </item>
           <item>
-           <widget class="QLabel" name="battaryLabel">
-            <property name="text">
-             <string>Şarj yüzdesi : </string>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>0</number>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
             </property>
-           </widget>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="batteryTextLabel">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 15pt</string>
+              </property>
+              <property name="text">
+               <string>Şarj yüzdesi : </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="batteryIconLabel">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
           <item>
            <widget class="QLabel" name="statusLabel">
+            <property name="styleSheet">
+             <string notr="true">font: 12 pt</string>
+            </property>
             <property name="text">
              <string>Cihaza bağlanmak için bekleniyor...</string>
             </property>
@@ -122,9 +179,26 @@
           </item>
           <item>
            <widget class="QListWidget" name="BleDevices">
+            <property name="styleSheet">
+             <string notr="true">font:15pt; text-align:center</string>
+            </property>
+            <property name="itemAlignment">
+             <set>Qt::AlignCenter</set>
+            </property>
             <item>
              <property name="text">
               <string>New Item</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </item>
            </widget>
@@ -132,7 +206,7 @@
           <item>
            <widget class="QPushButton" name="scanButton">
             <property name="styleSheet">
-             <string notr="true">background : red ; color : white</string>
+             <string notr="true">background : red ; color : white ; font:15 pt;</string>
             </property>
             <property name="text">
              <string>Taramayı Başlat</string>
@@ -156,6 +230,9 @@
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
            <widget class="QListWidget" name="contacts">
+            <property name="styleSheet">
+             <string notr="true">font:15pt; text-align:center</string>
+            </property>
             <item>
              <property name="text">
               <string>New Item</string>
@@ -168,6 +245,9 @@
        </layout>
       </widget>
       <widget class="QWidget" name="callHistoryTab">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <attribute name="icon">
         <iconset resource="resources.qrc">
          <normaloff>:/Icons/telephone.png</normaloff>:/Icons/telephone.png</iconset>
@@ -180,6 +260,9 @@
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
            <widget class="QListWidget" name="callHistory">
+            <property name="styleSheet">
+             <string notr="true">font : 15pt</string>
+            </property>
             <item>
              <property name="text">
               <string>New Item</string>
@@ -201,7 +284,7 @@
      <x>0</x>
      <y>0</y>
      <width>333</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
