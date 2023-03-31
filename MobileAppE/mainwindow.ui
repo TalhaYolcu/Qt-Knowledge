@@ -55,16 +55,36 @@
        <enum>Qt::LeftToRight</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">font:13pt;</string>
+       <string notr="true">font:13pt;
+
+QTabBar::tab:!selected
+{
+
+
+    background:rgb(75,75,75);
+    border: 2px solid rgb(85,85,85);
+    border-bottom-style: none;
+    border-top-left-radius:     4px;
+    border-top-right-radius:    4px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius:  0px;
+    padding: 6px 10px 4px 10px;
+    margin: 4px 0px 0px 0px;
+};
+
+QTabBar::tab{padding-left:40px;height:30px;};</string>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::South</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
       </property>
       <property name="documentMode">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
       <widget class="QWidget" name="homePageTab">
        <property name="contextMenuPolicy">
@@ -81,9 +101,12 @@
          <normaloff>:/Icons/home.png</normaloff>:/Icons/home.png</iconset>
        </attribute>
        <attribute name="title">
-        <string>Ana Sayfa</string>
+        <string/>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+        <property name="topMargin">
+         <number>9</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
@@ -103,7 +126,7 @@
                <string notr="true">background: red ; font : 15pt bold;</string>
               </property>
               <property name="text">
-               <string>5533806379</string>
+               <string>SIP Bağlı Değil</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -185,22 +208,6 @@
             <property name="itemAlignment">
              <set>Qt::AlignCenter</set>
             </property>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-             <property name="textAlignment">
-              <set>AlignCenter</set>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-             <property name="textAlignment">
-              <set>AlignCenter</set>
-             </property>
-            </item>
            </widget>
           </item>
           <item>
@@ -223,7 +230,7 @@
          <normaloff>:/Icons/contact.png</normaloff>:/Icons/contact.png</iconset>
        </attribute>
        <attribute name="title">
-        <string>Kişiler</string>
+        <string/>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
         <item row="0" column="0">
@@ -233,11 +240,6 @@
             <property name="styleSheet">
              <string notr="true">font:15pt; text-align:center</string>
             </property>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
            </widget>
           </item>
          </layout>
@@ -253,7 +255,7 @@
          <normaloff>:/Icons/telephone.png</normaloff>:/Icons/telephone.png</iconset>
        </attribute>
        <attribute name="title">
-        <string>Arama</string>
+        <string/>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="0" column="0">
@@ -263,11 +265,6 @@
             <property name="styleSheet">
              <string notr="true">font : 15pt</string>
             </property>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
            </widget>
           </item>
          </layout>
@@ -277,16 +274,6 @@
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>333</width>
-     <height>23</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
