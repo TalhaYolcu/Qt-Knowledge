@@ -1,7 +1,9 @@
 #include "include/mainwindow.h"
 #include "ui_mainwindow.h"
-#include "include/pjsip/pjsua2.hpp"
 
+
+//#include"pjsua2.hpp"
+#include "pjsua2.hpp"
 using namespace pj;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,8 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+
+
     Endpoint* ep=new Endpoint();
+
     ep->libCreate();
+
+
 }
 
 MainWindow::~MainWindow()
